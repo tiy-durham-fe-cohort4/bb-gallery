@@ -1,0 +1,11 @@
+<h1>Gallery</h1>
+<a href="#images/new">+ Image</a>
+
+<ul class="images">
+<% m.images.forEach(function (image) { %>
+  <li class="image-container">
+    <img class="image-img" src="<%- image.url %>" />
+    <h2 class="image-description"><%- image.description %></h2>
+  </li> 
+<% }) %>
+</ul>
