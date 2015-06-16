@@ -4,10 +4,9 @@ var Backbone = require('backbone');
 var view = require('../utils/view');
 var formToObj = require('form-to-obj');
 var router = require('../router');
+var $ = require('jquery');
 
-module.exports = Backbone.View.extend({
-  el: '.main-content',
-  
+module.exports = Backbone.View.extend({  
   template: view.template('new-image'),
 
   events: {
@@ -16,6 +15,7 @@ module.exports = Backbone.View.extend({
 
   initialize: function () {
     this.render();
+    $('.main-content').html(this.$el);
   },
 
   render: function () {

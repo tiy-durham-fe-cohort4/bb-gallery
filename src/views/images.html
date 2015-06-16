@@ -5,7 +5,10 @@
 <% m.images.forEach(function (image) { %>
   <li class="image-container">
     <img class="image-img" src="<%- image.url %>" />
-    <h2 class="image-description"><%- image.description %></h2>
+    <h2 class="image-description">
+      <%- image.description %> 
+      <button data-id="<%- image._id %>" class="delete-image">&times;</button>
+    </h2>
   </li> 
 <% }) %>
 </ul>
